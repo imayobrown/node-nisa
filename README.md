@@ -3,9 +3,7 @@
 nisa is a working prototype for using VISA library in node.js.
 This is a wrapper for visa32.dll (in your system32 folder).
 
-I tested this code on Windows 8.1 (64bit), Keysight IO Library (17.1), node.js
-
-Talked to HP 6623A, Keithley 199, Keithley 228A, Keithley 237
+Currently code has been tested on Windows 8.1 (64bit), Keysight IO Library (17.1), node.js
 
 You must have Keysight or National Instruments VISA drivers installed. You need to have compatible interface and and instrument that talks over GPIB. For simple testing you can skip the hardware part as VISA can talk over COM ports, too. 
 ```
@@ -17,12 +15,8 @@ visa.query("GPIB0::12::INSTR", "*IDN?", function(err, result) {
  // do something
 }
 ```
-
-## Etymology
-VISA is the name of the library.. merged with node.js it becomes "nisa"
 ## Known limitations and bugs
-Due to lack of interest (it works for me) and more importantly lack of knowledgem, the current implementation includes some memory leaks.
-The implemented functions were selected solely to control my current setup. This is not meant to be a complete implementation of VISA interface. API was adapted to my undestanding of node ways to my best efforts.
+According to @samofab, current implementation includes some memory leaks.
 
 ## Acknowledgements
 
